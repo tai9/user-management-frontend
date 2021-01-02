@@ -5,12 +5,12 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import { SignInStyled } from "./SignInStyled";
+import { SignInStyled } from "./styles";
+import { Link } from "react-router-dom";
 
 export type SignInProps = {
   handleSubmit: (event: React.FormEvent) => void;
@@ -66,22 +66,13 @@ const SignIn: React.FC<SignInProps> = ({ handleSubmit }) => {
             Sign In
           </Button>
           <Box textAlign="right">
-            <Link href="#" variant="body2">
-              Forgot password?
-            </Link>
+            <Link to="/">Forgot password?</Link>
           </Box>
           <Box mt={4} textAlign="center">
-            <Link href="#" variant="body2">
-              {"Don't have an account? Sign Up"}
-            </Link>
+            <Link to="/signup">{"Don't have an account? Sign Up"}</Link>
           </Box>
         </form>
       </SignInStyled>
-      <Box mt={8}>
-        <Typography variant="body2" color="textSecondary" align="center">
-          {"Made with ❤ by Tai9 "}
-        </Typography>
-      </Box>
     </Container>
   );
 };

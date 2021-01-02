@@ -1,12 +1,15 @@
 import React from "react";
-import SignInContainer from "./containers/SignIn/SignInContainer";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
+import Routes from "./routes";
+const App = () => {
   return (
     <div className="App">
-      <SignInContainer />
+      <Router>
+        <Routes />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

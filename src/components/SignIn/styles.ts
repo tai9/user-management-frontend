@@ -6,6 +6,17 @@ export const SignInStyled = styled.div`
   align-items: center;
   flex-direction: column;
 
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+  }
+
+  a:hover {
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+  }
+
   .avatar {
     margin: 8px;
     background: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
@@ -13,7 +24,7 @@ export const SignInStyled = styled.div`
 
   .form {
     width: 100%;
-    margin-top: 8px;
+    margin-top: 18px;
   }
 
   .btn_submit {
@@ -24,6 +35,10 @@ export const SignInStyled = styled.div`
       rgb(33, 203, 243) 90%
     );
     box-shadow: rgba(33, 203, 243, 0.3) 0px 3px 5px 2px;
+  }
+
+  .btn_submit:hover {
+    box-shadow: rgba(33, 203, 243, 0.3) 0px 5px 10px 2px;
   }
 
   .checkbox {
