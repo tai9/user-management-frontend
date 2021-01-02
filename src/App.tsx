@@ -1,10 +1,10 @@
 import React from "react";
-import SignIn from "./components/Signin";
+import SignInContainer from "./containers/SignIn/SignInContainer";
 
 function App() {
   return (
     <div className="App">
-      <SignIn />
+      <SignInContainer />
     </div>
   );
 }
